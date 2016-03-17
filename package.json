@@ -1,14 +1,14 @@
 {
   "name": "mis-cervezas",
-  "version": "1.0.0",
   "description": "Libería para consultar cervezas",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juanda99/mis-cervezas.git"
+    "url": "https://github.com/juanda99/mis-cervezas.git"
   },
   "keywords": [
     "cerveza",
@@ -22,6 +22,18 @@
   },
   "homepage": "https://github.com/juanda99/mis-cervezas#readme",
   "dependencies": {
+    "lodash": "^4.6.1",
     "unique-random-array": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cz-conventional-changelog": "^1.1.5",
+    "mocha": "^2.4.5",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

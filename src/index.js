@@ -4,3 +4,5 @@ module.exports = {
     todas: cervezas,
     alazar: uniqueRandomArray(cervezas)
 }
+
+uniqueRandomArray(cervezas)()
